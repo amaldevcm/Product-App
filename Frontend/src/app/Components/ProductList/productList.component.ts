@@ -1,10 +1,11 @@
 import { Component } from "@angular/core";
 
 @Component({
+    selector: 'prod-list',
     templateUrl: './productList.component.html',
-    imports: []
+    standalone: false
 })
 
-export class ProductList {
+export class ProductListComponent {
     constructor() {}
 }

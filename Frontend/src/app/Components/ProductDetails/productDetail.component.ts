@@ -1,11 +1,12 @@
 import { Component, Input } from "@angular/core";
 
 @Component({
+    selector: 'prod-details',
     templateUrl: './productDetail.component.html',
-    imports: []
+    standalone: false,
 })
 
-export class ProductDetail {
+export class ProductDetailComponent {
     @Input() data = {
         name: '',
         price: 0,

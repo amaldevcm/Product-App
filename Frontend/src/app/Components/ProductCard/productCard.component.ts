@@ -1,14 +1,13 @@
 import { Component, Input, Output } from "@angular/core";
-import { ProductList } from "../ProductList/productList.component";
-import { ProductDetail } from "../ProductDetails/productDetail.component";
+import { ProductListComponent } from "../ProductList/productList.component";
+import { ProductDetailComponent } from "../ProductDetails/productDetail.component";
 
 @Component({
     templateUrl: './ProductCard.component.html',
-    standalone: true,
-    imports: [ProductList, ProductDetail]
+    standalone: false,
 })
 
-export class ProductCard {
+export class ProductCardComponent {
     @Input() data = []
     @Output() selectedProduct = {}
 
