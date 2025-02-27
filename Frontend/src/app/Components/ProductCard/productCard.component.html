@@ -1,4 +1,5 @@
-<div class="flex flex-row">
-    <prod-list />
-    <prod-details />
+<div class=" w-60 h-70 p-2 rounded-lg border border-gray-300 flex flex-col hover:shadow" (click)="onClick()">
+    <img src="https://tinasbotanicals.com/wp-content/uploads/2025/01/No-Product-Image-Available.png" alt="No product image" class="rounded overflow-hidden">
+    <h2 class="font-bold">{{data.name}}</h2>
+    <h5>&#36; {{data.price}}</h5>
 </div>

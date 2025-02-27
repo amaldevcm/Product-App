@@ -1,17 +1,25 @@
-import { Component, Input, Output } from "@angular/core";
-import { ProductListComponent } from "../ProductList/productList.component";
-import { ProductDetailComponent } from "../ProductDetails/productDetail.component";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 
 @Component({
+    selector: 'prod-card',
     templateUrl: './ProductCard.component.html',
     standalone: false,
 })
 
 export class ProductCardComponent {
-    @Input() data = []
-    @Output() selectedProduct = {}
+    @Input() data = {
+        id: -1,
+        name: null,
+        price: 0,
+        description: null
+    }
+    @Output() cardOnClick = new EventEmitter<any>();
 
     constructor() {
         
+    }
+
+    onClick() {
+        this.cardOnClick.emit(this.data.id);
     }
 }
